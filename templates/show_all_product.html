@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Show All Products{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-8">
+      <div class="display-3 text-center">All {{length}} Products</div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-5">
+      <ul>
+        {% for p in product_list %}
+        <li>Product id={{p.id}} color={{p.name_color}} type={{p.name_type}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
